@@ -9,13 +9,14 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <!-- Camera -->
-    <!--<uses-permission android:name="android.permission.CAMERA" />-->
+    <!-- <uses-permission android:name="android.permission.CAMERA" /> -->
     <!-- Keeps the processor from sleeping when a message is received. -->
-    <!--<uses-permission android:name="android.permission.WAKE_LOCK" />-->
+    <!-- <uses-permission android:name="android.permission.WAKE_LOCK" /> -->
     <!-- Call Phone -->
-    <!--<uses-permission android:name="android.permission.CALL_PHONE" />-->
+    <!-- <uses-permission android:name="android.permission.CALL_PHONE" /> -->
     <!-- GCM requires a Google account. -->
-    <!-- <uses-permission android:name="android.permission.GET_ACCOUNTS" />-->
+    <!-- <uses-permission android:name="android.permission.GET_ACCOUNTS" /> -->
+
 
     <!-- For Notification -->
     <!--
@@ -24,19 +25,23 @@
         android:protectionLevel="signature" />
     -->
     <!-- For Notification -->
-    <!--<uses-permission android:name="info.srihawong.templateapplication.permission.C2D_MESSAGE" />-->
+    <!-- <uses-permission android:name="info.srihawong.templateapplication.permission.C2D_MESSAGE" /> -->
     <!-- This app has permission to register and receive data message. -->
-    <!--<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />-->
+    <!-- <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" /> -->
 
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
-        <!-- For Google Play Service  -->
+
+        <!-- For Google Play Service -->
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/fb_app_id" />
 
         <!-- Class for receive GCM Service -->
         <!-- <service android:name="info.srihawong.templateapplication.GcmIntentService" /> -->
@@ -44,16 +49,18 @@
         <activity
             android:name=".SplashScreenActivity"
             android:label="@string/app_name"
-            android:theme="@style/noActionBar"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait"
+            android:theme="@style/noActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name=".MainActivity"
             android:label="@string/title_activity_main" >
+
             <!-- Receive Data form other application (deeplink) -->
             <!--
             <intent-filter>
@@ -65,11 +72,20 @@
             -->
 
         </activity>
+        <activity
+            android:name=".FBLoginActivity"
+            android:label="@string/title_activity_fblogin" >
+        </activity>
 
         <!-- For AdsMob -->
         <activity
             android:name="com.google.android.gms.ads.AdActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
+        <activity android:name="com.facebook.LoginActivity" />
+        <activity
+            android:name="example.FBFeedActivity"
+            android:label="@string/title_activity_fbfeed" >
+        </activity>
     </application>
 
 </manifest>

@@ -6,5 +6,8 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="version">Version</string>
+    <string name="title_activity_fblogin">Facebook login</string>
+    <string name="fb_app_id">332304806944086</string>
+    <string name="title_activity_fbfeed">Facebook Feed</string>
 
 </resources>
