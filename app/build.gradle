@@ -24,4 +24,5 @@ dependencies {
     //compile 'com.google.android.gms:play-services:4.2.42'
     compile 'com.google.android.gms:play-services:5.2.08'
     compile project(':facebook')
+    compile 'com.github.chrisbanes.actionbarpulltorefresh:extra-abc:+'
 }
