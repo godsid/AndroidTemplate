@@ -1,9 +1,13 @@
 package info.srihawong.templateapplication;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import info.srihawong.templateapplication.lib.MyProgressDialog;
 
 
 public class MainActivity extends Activity {
@@ -12,6 +16,12 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //MyProgressDialog myProgressDialog = new MyProgressDialog(getApplicationContext());
+        //myProgressDialog.show();
+        MyProgressDialog progressDoalog = new MyProgressDialog(MainActivity.this);
+        progressDoalog.show();
+
     }
 
 

@@ -9,5 +9,6 @@
     <string name="title_activity_fblogin">Facebook login</string>
     <string name="fb_app_id">332304806944086</string>
     <string name="title_activity_fbfeed">Facebook Feed</string>
+    <string name="empty_string"></string>
 
 </resources>
